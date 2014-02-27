@@ -4,11 +4,11 @@ var RepubblicaSportMatchCrawler = require('../lib/index.js');
 describe('Repubblica Sport Match', function () {
     'use strict';
 
-    it('return null on err and data', function (done) {
-
+    it('return err when no URL is passed', function (done) {
         var crawler = new RepubblicaSportMatchCrawler();
         crawler.load(function (err, data) {
-            should.not.exist(err);
+            should.exist(err);
+            err.message.should.be.equal('load.error.urlNeeded');
             should.not.exist(data);
             done();
         });
