@@ -17,7 +17,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha --reporter spec --globals lw --recursive ./test -t 0 --globals options,$"
+    "test": "mocha --watch --growl --reporter spec --globals lw --recursive ./test -t 0 --globals options,$"
   },
   "repository": {
     "type": "git",

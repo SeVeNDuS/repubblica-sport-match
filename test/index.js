@@ -14,6 +14,20 @@ describe('Repubblica Sport Match', function () {
         });
     });
 
+    it('returns invalid host when non repubblica URL is passed', function (done) {
+        var options = {
+            url: 'http://www.google.com'
+        };
+
+        var crawler = new RepubblicaSportMatchCrawler(options);
+        crawler.load(function (err, data) {
+            should.exist(err);
+            err.message.should.be.equal('load.error.invalidUrl');
+            should.not.exist(data);
+            done();
+        });
+    });
+
     it('returns no err when URL is passed', function (done) {
         var options = {
             url: 'http://sport.repubblica.it/tabellino/A/Bologna/Roma?refresh_ce'
