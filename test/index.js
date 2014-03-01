@@ -57,7 +57,7 @@ describe('Repubblica Sport Match', function () {
             player.should.have.property('code');
             player.should.have.property('name');
             player.should.have.property('points');
-            
+
             data[1].length.should.be.equal(14);
             done();
         });
