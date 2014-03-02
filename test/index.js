@@ -41,7 +41,7 @@ describe('Repubblica Sport Match', function () {
         });
     });
 
-    it('returns an array with two teams data', function (done) {
+    it('returns an array with 28 players data', function (done) {
         var options = {
             url: 'http://sport.repubblica.it/tabellino/A/Bologna/Roma?refresh_ce'
         };
@@ -50,15 +50,13 @@ describe('Repubblica Sport Match', function () {
         crawler.load(function (err, data) {
             should.not.exist(err);
             should.exist(data);
-            data.length.should.be.equal(2);
-            data[0].length.should.be.equal(14);
+            data.length.should.be.equal(28);
 
-            var player = data[0][0];
+            var player = data[0];
             player.should.have.property('code');
             player.should.have.property('name');
             player.should.have.property('points');
 
-            data[1].length.should.be.equal(14);
             done();
         });
     });

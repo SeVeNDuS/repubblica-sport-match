@@ -1,13 +1,11 @@
 {
   "name": "repubblica-sport-match",
-  "version": "0.0.1",
-  "description": "A node.js module to crawl a match report",
-  "main": "lib/crawl.js",
+  "version": "0.0.2",
+  "description": "A node.js module to scrape player points from Repubblica Sport match report",
+  "main": "lib/index.js",
   "dependencies": {
-    "async": "~0.1.22",
     "request": "~2.16.6",
-    "cheerio": "~0.13.1",
-    "lodash": "~2.4.1"
+    "cheerio": "~0.13.1"
   },
   "devDependencies": {
     "should": "~3.1.3",
