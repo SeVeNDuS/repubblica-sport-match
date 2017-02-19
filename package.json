@@ -1,6 +1,6 @@
 {
   "name": "repubblica-sport-match",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A node.js module to scrape player points from Repubblica Sport match report",
   "main": "lib/index.js",
   "dependencies": {
